@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "skipToContent": "Skip to content",
+    "projects": "Projects",
+    "otherWork": "Other work",
+    "skills": "Skills",
+    "contact": "Contact",
+    "language": "Language",
+    "switchTo": "Français"
+  },
+  "hero": {
+    "liveProductsLabel": "Live products"
+  },
+  "actions": {
+    "viewProjects": "View projects",
+    "contactMe": "Contact me",
+    "viewProject": "View {name}",
+    "readProject": "Read the {name} write-up",
+    "backHome": "Back to home",
+    "writeTo": "Write to {email}"
+  },
+  "sections": {
+    "projects": {
+      "title": "Projects",
+      "lede": "Two projects in production, with their technical write-up."
+    },
+    "otherWork": {
+      "title": "Other work"
+    },
+    "skills": {
+      "title": "Skills"
+    },
+    "contact": {
+      "title": "Contact",
+      "lede": "Three questions, then your message."
+    }
+  },
+  "project": {
+    "categoryLabel": "Category",
+    "stackLabel": "Stack",
+    "roleLabel": "Role",
+    "factsLabel": "Technical points",
+    "angleLabel": "What the project shows",
+    "liveLabel": "In production",
+    "shotAlt": "{name}: home page screenshot",
+    "openLive": "View {name} online"
+  },
+  "contact": {
+    "stepCounter": "Step {current} of {total}",
+    "audience": {
+      "question": "Who are you?",
+      "recruiter": "Recruiter",
+      "client": "Client",
+      "productPartner": "Product partner"
+    },
+    "recruiter": {
+      "position": "Which role?",
+      "stack": "Which stack?"
+    },
+    "client": {
+      "projectNature": "What kind of project?",
+      "horizon": "On what timeline?"
+    },
+    "productPartner": {
+      "product": "Which product?"
+    },
+    "identity": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "buttons": {
+      "continue": "Continue",
+      "back": "Back",
+      "send": "Send",
+      "sending": "Sending"
+    },
+    "status": {
+      "sent": "Sent.",
+      "sentDetail": "The message is on its way. Reply goes to the address you gave.",
+      "failed": "Sending failed. Write to {email}.",
+      "rateLimited": "Too many attempts in a short time. Try later, or write to {email}."
+    },
+    "validation": {
+      "required": "This field is required.",
+      "email": "This email address is invalid.",
+      "messageTooShort": "The message needs at least {min} characters.",
+      "tooLong": "This field is too long."
+    },
+    "fallback": "You can also write directly to <mail>{email}</mail>.",
+    "steps": {
+      "audience": "Who are you?",
+      "recruiter": "The role",
+      "client": "The project",
+      "productPartner": "The product",
+      "identity": "Your message"
+    },
+    "horizon": {
+      "placeholder": "Select",
+      "now": "Right away",
+      "quarter": "Within three months",
+      "later": "Later"
+    },
+    "productChoice": {
+      "placeholder": "Select"
+    },
+    "honeypot": "Leave this field empty"
+  },
+  "footer": {
+    "rights": "{year} Audin"
+  },
+  "meta": {
+    "home": {
+      "title": "Audin, backend architect",
+      "description": "Backend architect in Douala. Spring Boot systems, and three products in production: Rendoc, Elyra, Propriolink."
+    },
+    "project": {
+      "titleTemplate": "{name}, a project by Audin"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "This address does not match any page on the site."
+  }
+}

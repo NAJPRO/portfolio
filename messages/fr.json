@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "skipToContent": "Aller au contenu",
+    "projects": "Projets",
+    "otherWork": "Autres réalisations",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "language": "Langue",
+    "switchTo": "English"
+  },
+  "hero": {
+    "liveProductsLabel": "Produits en ligne"
+  },
+  "actions": {
+    "viewProjects": "Voir les projets",
+    "contactMe": "Me contacter",
+    "viewProject": "Voir {name}",
+    "readProject": "Lire le détail du projet {name}",
+    "backHome": "Revenir à l’accueil",
+    "writeTo": "Écrire à {email}"
+  },
+  "sections": {
+    "projects": {
+      "title": "Projets",
+      "lede": "Deux projets en production, avec leur récit technique."
+    },
+    "otherWork": {
+      "title": "Autres réalisations"
+    },
+    "skills": {
+      "title": "Compétences"
+    },
+    "contact": {
+      "title": "Contact",
+      "lede": "Trois questions, puis le message."
+    }
+  },
+  "project": {
+    "categoryLabel": "Catégorie",
+    "stackLabel": "Stack",
+    "roleLabel": "Rôle",
+    "factsLabel": "Points techniques",
+    "angleLabel": "Ce que le projet démontre",
+    "liveLabel": "En production",
+    "shotAlt": "{name} : capture de la page d’accueil",
+    "openLive": "Voir {name} en ligne"
+  },
+  "contact": {
+    "stepCounter": "Étape {current} sur {total}",
+    "audience": {
+      "question": "Vous êtes ?",
+      "recruiter": "Recruteur",
+      "client": "Client",
+      "productPartner": "Partenaire produit"
+    },
+    "recruiter": {
+      "position": "Quel poste ?",
+      "stack": "Quelle stack ?"
+    },
+    "client": {
+      "projectNature": "Quelle est la nature du projet ?",
+      "horizon": "À quel horizon ?"
+    },
+    "productPartner": {
+      "product": "Quel produit vous intéresse ?"
+    },
+    "identity": {
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Message"
+    },
+    "buttons": {
+      "continue": "Continuer",
+      "back": "Revenir",
+      "send": "Envoyer",
+      "sending": "Envoi en cours"
+    },
+    "status": {
+      "sent": "Envoyé.",
+      "sentDetail": "Le message est parti. Réponse à l’adresse indiquée.",
+      "failed": "L’envoi a échoué. Écrivez à {email}.",
+      "rateLimited": "Trop d’envois en peu de temps. Réessayez plus tard, ou écrivez à {email}."
+    },
+    "validation": {
+      "required": "Ce champ est requis.",
+      "email": "Cette adresse e-mail est invalide.",
+      "messageTooShort": "Le message doit faire au moins {min} caractères.",
+      "tooLong": "Ce champ est trop long."
+    },
+    "fallback": "Vous pouvez aussi écrire directement à <mail>{email}</mail>.",
+    "steps": {
+      "audience": "Vous êtes ?",
+      "recruiter": "Le poste",
+      "client": "Le projet",
+      "productPartner": "Le produit",
+      "identity": "Votre message"
+    },
+    "horizon": {
+      "placeholder": "Choisir",
+      "now": "Dès maintenant",
+      "quarter": "Dans les trois mois",
+      "later": "Plus tard"
+    },
+    "productChoice": {
+      "placeholder": "Choisir"
+    },
+    "honeypot": "Laissez ce champ vide"
+  },
+  "footer": {
+    "rights": "{year} Audin"
+  },
+  "meta": {
+    "home": {
+      "title": "Audin, architecte backend",
+      "description": "Architecte backend à Douala. Systèmes Spring Boot, et trois produits en production : Rendoc, Elyra, Propriolink."
+    },
+    "project": {
+      "titleTemplate": "{name}, projet d’Audin"
+    }
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "Cette adresse ne correspond à aucune page du site."
+  }
+}

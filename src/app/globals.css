@@ -1,26 +1,114 @@
 @import "tailwindcss";
 
+/**
+ * Les jetons portent les noms de la charte (bg-deep, accent, text-muted). Le mappage
+ * Tailwind est déclaré en `inline` juste en dessous : les utilitaires pointent alors
+ * vers ces variables, et une couleur ne se retrouve jamais définie à deux endroits.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-deep: #0b0e14;
+  --bg-surface: #141922;
+  --bg-raised: #1c2330;
+  --border: #232b38;
+  --accent: #ff6b2c;
+  --accent-soft: #ffa366;
+  --text: #e8ecf2;
+  --text-muted: #8b95a5;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-deep: var(--bg-deep);
+  --color-surface: var(--bg-surface);
+  --color-raised: var(--bg-raised);
+  --color-line: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-ink: var(--text);
+  --color-ink-muted: var(--text-muted);
+
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  /* Le site n'a qu'un seul thème : le déclarer évite les contrôles de formulaire clairs. */
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-deep);
+    color: var(--text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--bg-deep);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  /*
+   * Le display est resserré par l'axe de chasse de Bricolage Grotesque, jamais par une
+   * transformation CSS, qui déformerait le dessin des lettres. L'axe optique n'est pas
+   * demandé : il coûtait 52 ko sur un fichier qui en pèse 76.
+   */
+  .font-display {
+    font-variation-settings: "wdth" 88;
+    letter-spacing: -0.02em;
+  }
+
+  .font-mono {
+    font-variation-settings: normal;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/**
+ * Apparition des blocs au défilement.
+ *
+ * L'état masqué n'existe que si `data-reveal-state` a été posé par JavaScript. Sans lui,
+ * la page s'affiche entière : rien n'attend une animation qui ne viendra pas. L'attribut
+ * est retiré une fois l'apparition terminée, ce qui rend aux éléments leurs propres
+ * transitions, notamment celles du survol des cartes.
+ *
+ * La translation passe par `transform` et non par `translate` : les utilitaires
+ * Tailwind emploient `translate`, les deux se composent au lieu de s'écraser.
+ */
+[data-reveal][data-reveal-state] > * {
+  transition-property: opacity, transform;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--reveal-index, 0) * 60ms);
+}
+
+[data-reveal][data-reveal-state="armed"] > * {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+[data-reveal][data-reveal-state="shown"] > * {
+  opacity: 1;
+  transform: none;
+}
+
+/**
+ * Garde-fou global : toute animation ajoutée en phase 5 reste soumise à cette règle,
+ * y compris celles pilotées par GSAP à travers des propriétés CSS.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
