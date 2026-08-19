@@ -111,8 +111,8 @@
   },
   "meta": {
     "home": {
-      "title": "Audin, architecte backend",
-      "description": "Architecte backend à Douala. Systèmes Spring Boot, et trois produits en production : Rendoc, Elyra, Propriolink."
+      "title": "Audin Junior, architecte logiciel",
+      "description": "Je conçois des architectures logicielles, et je livre les produits qui tournent dessus."
     },
     "project": {
       "titleTemplate": "{name}, projet d’Audin"
