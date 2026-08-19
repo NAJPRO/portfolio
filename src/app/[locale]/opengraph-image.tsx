@@ -10,7 +10,7 @@ import {
 
 export const size = ogImageSize;
 export const contentType = ogImageContentType;
-export const alt = 'Audin';
+export const alt = 'Audin Junior';
 
 /** Sans cela, l'image serait rendue à chaque passage d'un robot d'indexation. */
 export function generateStaticParams() {
@@ -29,7 +29,7 @@ export default async function OpenGraphImage({
   const t = await getTranslations({locale: active, namespace: 'hero'});
 
   return renderOgImage({
-    title: 'Audin',
+    title: 'Audin Junior',
     subtitle: `${site.role[active]}. ${site.location[active]}.`,
     footerLabel: t('liveProductsLabel'),
     footerItems: site.liveProducts.map((product) => new URL(product.url).host)

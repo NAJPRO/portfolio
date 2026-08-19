@@ -32,8 +32,8 @@ export const site = {
   author: "Audin Junior",
   email: "audinjunior1@gmail.com",
   role: {
-    fr: "Architecte backend",
-    en: "Backend architect",
+    fr: "Architecte logiciel",
+    en: "Software architect",
   },
   location: {
     fr: "Douala, Cameroun",
